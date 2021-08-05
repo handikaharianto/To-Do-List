@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/f5f5fa98ca.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="main">
+      <h1 class="title">to do list</h1>
+      <form class="form">
+        <input type="text" class="input" />
+        <button type="submit" class="submit-button">add</button>
+      </form>
+      <div class="item-list-container">
+        <div class="item-list">
+          <!-- single item -->
+          <div class="item">
+            <div class="activity-container">
+              <input
+                type="checkbox"
+                id="grocery"
+                class="checkbox"
+                name="to-do"
+              />
+              <label for="grocery" class="todo-name">buy grocery</label>
+            </div>
+
+            <div class="button-container">
+              <button class="edit-button">
+                <i class="fas fa-edit"></i>
+              </button>
+              <button class="delete-button">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <button class="clear-button">clear todos</button>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

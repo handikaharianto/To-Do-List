@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
+
+:root {
+  --ff-primary: "Montserrat", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--ff-primary);
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: 0.2em;
+}
+
+button {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  letter-spacing: 0.2em;
+}
+
+.main {
+  max-width: 650px;
+  width: 90%;
+  margin: 20vh auto;
+  border: 1px solid black;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  margin: 2em 0;
+}
+
+.form .input {
+  font-size: 1.2rem;
+  padding: 0.2em 0.4em;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.submit-button {
+  /* font-size: 1.2rem; */
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+}
+
+.activity-container,
+.button-container {
+  margin: 0 1em;
+}
+
+.activity-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  height: 30px;
+  width: 30px;
+}
+
+.todo-name {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  margin-left: 0.5em;
+}
+
+.edit-button,
+.delete-button {
+  font-size: 1.3rem;
+  background-color: transparent;
+  margin-left: 0.25em;
+  border: none;
+}
+
+.edit-button {
+  color: #5388b4;
+}
+
+.delete-button {
+  color: #d11a2a;
+}
+
+.clear-button {
+  display: block;
+  background-color: transparent;
+  border: none;
+  margin: 0 auto;
+}
