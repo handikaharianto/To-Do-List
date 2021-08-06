@@ -56,7 +56,7 @@ function addItem(e) {
     updateLocalStorage(editedID, editedValue, elementStatus);
     setBackToDefault();
   } else {
-    displayAlert("invalid value", "danger");
+    displayAlert("invalid value!", "danger");
   }
 }
 
@@ -83,6 +83,7 @@ function deleteItem(e) {
   }
 
   removeItemFromLocalStorage(id);
+  displayAlert("successfully deleted!", "danger");
 }
 
 // clear items
@@ -92,7 +93,9 @@ function clearItems() {
     itemList.removeChild(item);
   });
   clearButton.classList.remove("active");
+
   localStorage.removeItem("list");
+  displayAlert("all todos have been removed!", "danger");
 }
 
 // create item
