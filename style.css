@@ -2,6 +2,13 @@
 
 :root {
   --ff-primary: "Montserrat", sans-serif;
+  --clr-dark-blue: #1d3557;
+  --clr-aqua: #80ffdb;
+  --clr-light-aqua: #e2f3f3;
+  --clr-white: #f1f9f9;
+  --clr-red: #e63946;
+  --clr-light-red: #ee596a;
+  --clr-blue: #5388b4;
 }
 
 *,
@@ -14,12 +21,21 @@
 
 body {
   font-family: var(--ff-primary);
+  background-color: var(--clr-light-aqua);
 }
 
 h1 {
+  color: var(--clr-dark-blue);
   font-size: 3rem;
   font-weight: 600;
   text-transform: capitalize;
+  text-align: center;
+  letter-spacing: 0.2em;
+}
+
+p {
+  font-size: 1.3rem;
+  color: var(--clr-dark-blue);
   text-align: center;
   letter-spacing: 0.2em;
 }
@@ -28,13 +44,35 @@ button {
   font-size: 1.2rem;
   text-transform: capitalize;
   letter-spacing: 0.2em;
+  cursor: pointer;
 }
 
 .main {
+  background-color: var(--clr-white);
   max-width: 650px;
   width: 90%;
+  padding: 1em;
   margin: 20vh auto;
-  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.alert {
+  visibility: hidden;
+  text-transform: capitalize;
+  border-radius: 5px;
+}
+
+.alert.success {
+  visibility: visible;
+  color: var(--clr-dark-blue);
+  background-color: var(--clr-aqua);
+}
+
+.alert.danger {
+  visibility: visible;
+  color: var(--clr-white);
+  background-color: var(--clr-light-red);
 }
 
 .form {
@@ -44,23 +82,35 @@ button {
 }
 
 .form .input {
+  color: var(--clr-dark-blue);
+  background-color: var(--clr-light-aqua);
   font-size: 1.2rem;
   padding: 0.2em 0.4em;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border: none;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
 }
 
 .submit-button {
-  /* font-size: 1.2rem; */
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  cursor: pointer;
+  color: var(--clr-white);
+  background-color: var(--clr-dark-blue);
+  border: 3px solid var(--clr-dark-blue);
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  transition: all 0.3s linear;
 }
 
 .item {
   display: flex;
   justify-content: space-between;
+  padding: 0.4em 0.4em;
   margin-bottom: 1.5em;
+  border-radius: 5px;
+  transition: all 0.3s linear;
+}
+
+.item:hover {
+  background-color: var(--clr-light-aqua);
 }
 
 .activity-container,
@@ -68,20 +118,24 @@ button {
   margin: 0 1em;
 }
 
-.activity-container {
-  display: flex;
-  align-items: center;
-}
-
 .checkbox {
   height: 30px;
   width: 30px;
+  margin-right: 1em;
+  cursor: pointer;
 }
 
 .todo-name {
+  display: flex;
+  align-items: center;
+  color: var(--clr-dark-blue);
   font-size: 1.5rem;
   text-transform: capitalize;
-  margin-left: 0.5em;
+  cursor: pointer;
+}
+
+.checked .todo-name {
+  text-decoration: line-through;
 }
 
 .edit-button,
@@ -92,17 +146,30 @@ button {
   border: none;
 }
 
+.button-container {
+  display: flex;
+}
+
 .edit-button {
-  color: #5388b4;
+  color: var(--clr-blue);
 }
 
 .delete-button {
-  color: #d11a2a;
+  color: var(--clr-red);
 }
 
 .clear-button {
   display: block;
-  background-color: transparent;
-  border: none;
+  visibility: hidden;
+  color: var(--clr-white);
+  background-color: var(--clr-dark-blue);
+  padding: 0.5em;
   margin: 0 auto;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+
+.clear-button.active {
+  color: var(--clr-white);
+  visibility: visible;
 }
